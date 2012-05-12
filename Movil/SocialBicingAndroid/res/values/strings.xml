@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SocialBicingActivity!</string>
+    <string name="app_name">Social Bicing</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="location">Ubicación</string>
+    <string name="status">Estado de Bici</string>
+    <string name="code">Código</string>
+    <string name="distance">Distancia</string>
+    <string name="responsible">Responsable</string>
+    <string name="reserve">Reservar</string>
+    <string name="release">Liberar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="take">Tomar</string>
+    <string name="deliver">Entregar</string>
+
+</resources>

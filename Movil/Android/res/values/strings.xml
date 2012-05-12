@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SocialBicing</string>
+
+    <!-- Pantalla Login -->
+    <string name="hintUser">Usuario</string>
+    <string name="hintPass">Contraseña</string>
+    <string name="login">Iniciar Sesion</string>
+
+    <!-- Pantalla Bici -->
+    <string name="reservar">Reservar</string>
+    <string name="liberar">Liberar</string>
+    <string name="retirar">Retirar</string>
+    <string name="confirmar">Confirmar</string>
+
+    <string name="estadoBici">Estado</string>
+    <string name="codigoBici">Codigo</string>
+    <string name="ubicacionBici">Ubicacion</string>
+    <string name="responsableBici">Responsable</string>
+    <string name="distanciaBici">Distancia</string>
+    
+    <!-- Pantalla Mapa -->
+    
+    
+    <!-- Pantalla Retiro -->
+    <string name="tiempoRestanteRetiro">Tiempo Restante para retiro:</string>
+    <string name="codigoTransaccion">Entregue el siguiente codigo:</string>
+    
+    <!-- Pantalla Cancelar Reserva -->
+    <string name="hintMotivoCancelacion">Motivo de Canelacion</string>
+    <string name="cancelarReserva">Cancelar</string>
+    
+    <!-- Pantalla Liberar -->
+    <string name="ubicacionLiberarHint">Ingrese Direccion:</string>
+    <string name="miPosicion">Usar mi Posicion</string>
+    
+    <!-- Pantalla Confirmar Entrega -->
+    <string name="tiempoRestanteEntrega">Tiempo Restante para entrega:</string>
+    <string name="hintCodigoTransaccion">Ingrese Codigo:</string>
+    <string name="confirmarEntrega">Confirmar</string>
+    <string name="cancelarEntrega">Cancelar</string>
+    
+
+</resources>

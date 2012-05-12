@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SocialBicingActivity!</string>
+    <string name="app_name">SocialBicing</string>
+    <string name="hintUser">Usuario</string>
+    <string name="hintPass">Contraseña</string>
+    <string name="login">Iniciar Sesion</string>
+    
+    <string name="reservar">Reservar</string>
+    <string name="liberar">Liberar</string>
+    <string name="retirar">Retirar</string>
+    <string name="confirmar">Confirmar</string>
+    
+    <string name="estadoBici">Estado</string>
+    <string name="codigoBici">Codigo</string>
+    <string name="ubicacionBici">Ubicacion</string>
+    <string name="responsableBici">Responsable</string>
+    <string name="distanciaBici">Distancia</string>
+
+</resources>

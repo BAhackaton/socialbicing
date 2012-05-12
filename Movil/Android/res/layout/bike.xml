@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/estadoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/estadoBici"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/estadoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/codigoHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/codigoBici"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/codigoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/ubicacionHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ubicacionBici"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ubicacionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/distanciaHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distanciaBici"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/distanciaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/reponsableHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/responsableBici"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/responsableTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/reservar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reservar" />
+
+    <Button
+        android:id="@+id/liberar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/liberar" />
+
+    <Button
+        android:id="@+id/retirar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/retirar" />
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar" />
+
+</LinearLayout>

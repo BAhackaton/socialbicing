@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/estado"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/status"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/code"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="44728939" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="347mts" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/distance"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Avenida de Mayo 525" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/responsible"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/responsible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Mauricio" />
+
+    <Button
+        android:id="@+id/btn_reserve"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reserve" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_take"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/take"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_release"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/release"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_deliver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/deliver"
+        android:visibility="gone" />
+
+</LinearLayout>

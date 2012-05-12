@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>SocialBicing</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>net.rim.ejde.internal.builder.BlackBerryPreprocessBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>net.rim.ejde.internal.builder.BlackBerryResourcesBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>net.rim.ejde.BlackBerryPreProcessNature</nature>
+		<nature>net.rim.ejde.BlackBerryProjectCoreNature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>appCore</name>
+			<type>2</type>
+			<locationURI>appCore</locationURI>
+		</link>
+		<link>
+			<name>socialBicing_common</name>
+			<type>2</type>
+			<location>C:/Mobilenik/workspace2/SocialBicing/src</location>
+		</link>
+		<link>
+			<name>utilities</name>
+			<type>2</type>
+			<locationURI>utilities</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
