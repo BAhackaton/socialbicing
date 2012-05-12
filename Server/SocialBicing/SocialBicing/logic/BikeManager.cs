@@ -11,6 +11,7 @@ namespace com.mobilenik.socialbicing.logic
 {
     public class BikeManager
     {
+        //TODO Agregarle las bicicletas reservadas y en uso por el usuarios
         public GetFreeBikesResult GetFreeBikes(int idUser, float latitude, float longitude)
         {
             GetFreeBikesResult res = new GetFreeBikesResult();
@@ -46,6 +47,10 @@ namespace com.mobilenik.socialbicing.logic
 
             return dao.getBikesByState(idState);
         }
+        internal Bike GetBike(int idBike)
+        {
+            return new BikeDao().getBike(idBike);
+        }
 
         internal GetBikeResult GetBike(int idUser, int idBike)
         {
@@ -54,6 +59,7 @@ namespace com.mobilenik.socialbicing.logic
 
             res.resCod = 0;
             res.bike = dao.getBike(idBike);
+            res.userStatus = new UserManager().getUserStatus(idUser);
 
             return res;
         }
@@ -70,6 +76,7 @@ namespace com.mobilenik.socialbicing.logic
                 throw new Exception("Bicicleta no está libre");
             }
             dao.UpdateStatus(idBike, Constants.STATE_BIKE_IN_USE);
+            res.userStatus = new UserManager().getUserStatus(idUser);
 
             return res;
         }
@@ -78,6 +85,7 @@ namespace com.mobilenik.socialbicing.logic
         {
             FreeBikeResult res = new FreeBikeResult();
             BikeDao dao = new BikeDao();
+            UserDao uDao = new UserDao();
 
             res.resCod = 0;
             res.bike = dao.getBike(idBike);
@@ -86,6 +94,7 @@ namespace com.mobilenik.socialbicing.logic
                 throw new Exception("Bicicleta no está en uso");
             }
             dao.UpdateStatus(idBike, Constants.STATE_BIKE_FREE);
+            res.userStatus = new UserManager().getUserStatus(idUser);
 
             return res;
         }
@@ -181,15 +190,18 @@ namespace com.mobilenik.socialbicing.logic
             }
             else
             {
-                dao.UpdateUser(idBike, idUser);
+                dao.UpdateUser(idBike, reserve.idUser);
+                dao.UpdateStatus(idBike, Constants.STATE_BIKE_IN_USE);
                 reDao.UpdateStatus(reserve.id, Constants.STATE_RESERVE_USED);
+                usrManager.changeState(reserve.idUser, Constants.STATE_USER_HAS_BIKE_ASSIGNED);
+                usrManager.changeState(idUser, Constants.STATE_USER_HAS_NO_BIKE);
                 res.resCod = 0;
             }
             return res;
         }
 
         //TODO
-        internal CancelBikeReservationResult CancelReservation(int idUser, int idBike, string reserveCode)
+        internal CancelBikeReservationResult CancelReservation(int idUser, int idBike, string reserveCode, string comments)
         {
             UserManager usrManager = new UserManager();
             CancelBikeReservationResult res = new CancelBikeReservationResult();
@@ -216,7 +228,7 @@ namespace com.mobilenik.socialbicing.logic
                 res.resDesc = "La reserva ha expirado";
 
                 reDao.UpdateStatus(reserve.id, Constants.STATE_RESERVE_EXPIRED);
-                reCnsDao.Insert(reserve.id, Constants.RESERVE_CANCEL_REASON_TIMEOUT);
+                reCnsDao.Insert(reserve.id, comments);
                 User currentUsr = usrManager.getUser(idUser);
                 if (currentUsr.profile == Constants.PROFILE_COMMON)
                 {

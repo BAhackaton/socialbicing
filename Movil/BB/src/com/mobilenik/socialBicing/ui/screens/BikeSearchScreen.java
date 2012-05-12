@@ -303,15 +303,18 @@ public class BikeSearchScreen extends MKScreenE implements IListenerRequest, IMa
 		return places;
 	}
 
-
 	public void onResult(Object obj) {
 		bicisLibres = (Vector)obj;
-
 	}
 
 	public void onMarkerSelected(Marker marker) {
 		System.out.println("");
 		Bici bici = (Bici)markerBici.get(marker.getName());
 		dispatchMkEvent (new MKEvent(MKEventTypesE.GO_BICI_SCREEN, bici));
-	}	
+	}
+	
+	public boolean onClose(){
+		dispatchMkEvent (new MKEvent(MKEventTypesE.GO_LOGIN_SCREEN, null));
+		return false;
+	}
 }

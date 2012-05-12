@@ -9,5 +9,6 @@ namespace com.mobilenik.socialbicing.biz
     public class FreeBikeResult: Result
     {
         public Bike bike;
+        public UserStatus userStatus;
     }
 }

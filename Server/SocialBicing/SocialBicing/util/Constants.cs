@@ -23,7 +23,7 @@ namespace com.mobilenik.socialbicing.util
 
         public static float MAX_DISTANCE = 5;
 
-        public static int RESERVE_TIMEOUT = 10;
+        public static int RESERVE_TIMEOUT = 10; //minutes
 
         public static int PROFILE_STATION = 1;
         public static int PROFILE_COMMON = 2;

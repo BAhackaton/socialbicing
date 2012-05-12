@@ -57,6 +57,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="biz\OperationResult.cs" />
     <Compile Include="biz\FreeBikeResult.cs" />
     <Compile Include="biz\UseBikeResult.cs" />
     <Compile Include="biz\ReserveBikeCancelationResult.cs" />
@@ -65,7 +66,7 @@
     <Compile Include="biz\PassBikeResult.cs" />
     <Compile Include="biz\ReserveBikeResult.cs" />
     <Compile Include="biz\Result.cs" />
-    <Compile Include="biz\UserStatus.cs" />
+    <Compile Include="model\UserStatus.cs" />
     <Compile Include="dao\BaseDao.cs" />
     <Compile Include="dao\Conexion.cs" />
     <Compile Include="dao\ConexionProvider.cs" />

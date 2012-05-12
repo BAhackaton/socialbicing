@@ -70,9 +70,9 @@ namespace com.mobilenik.socialbicing
         }
 
         [WebMethod]
-        public CancelBikeReservationResult CancelBikeReservation(int idUser, int idBike, string reserveCode)
+        public CancelBikeReservationResult CancelBikeReservation(int idUser, int idBike, string reserveCode, string comments)
         {
-            CancelBikeReservationResult ret = Facade.CancelBikeReservation(idUser, idBike, reserveCode);
+            CancelBikeReservationResult ret = Facade.CancelBikeReservation(idUser, idBike, reserveCode,  comments);
             return ret;
         }
     }

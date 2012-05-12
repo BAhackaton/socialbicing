@@ -54,6 +54,13 @@ namespace com.mobilenik.socialbicing.dao
             return this.GetModelObject<Reserve>(where);
         }
 
+        internal Reserve getReserveFromUser(int idUser)
+        {
+            string where = "ID_USUARIO = " + DaoFunciones.GetValueToDB(idUser)
+                 + " and ID_ESTADO = 10";
+            return this.GetModelObject<Reserve>(where);
+        }
+
         internal void UpdateStatus(int idReserve, int idState)
         {
             string sql = "Update " + TABLE_NAME

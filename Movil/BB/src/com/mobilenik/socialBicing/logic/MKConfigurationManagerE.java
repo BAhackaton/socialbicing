@@ -15,7 +15,7 @@ public class MKConfigurationManagerE extends MKConfigurationManager{
 			break;
 		case 1:
 			//desarrollo
-			HOST_URL_BASE = "http://ba.mobilenik.com:81/SocialBicing/SocialBicing.asmx";
+			HOST_URL_BASE = "http://201.252.236.82:81/SocialBicing/SocialBicing.asmx";
 //			HOST_URL_BASE = "http://desasvm2.mobilenik.com.ar/SocialBicing/SocialBicing.asmx";
 			break;
 //		case 2: 

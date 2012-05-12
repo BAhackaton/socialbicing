@@ -192,14 +192,14 @@ namespace com.mobilenik.socialbicing.logic
             return res;
         }
 
-        internal static CancelBikeReservationResult CancelBikeReservation(int idUser, int idBike, string reserveCode)
+        internal static CancelBikeReservationResult CancelBikeReservation(int idUser, int idBike, string reserveCode, string comments)
         {
             CancelBikeReservationResult res;
             try
             {
                 Facade.AbrirConexion();
                 ConexionProvider.GetInstance().BeginTran();
-                res = new BikeManager().CancelReservation(idUser, idBike, reserveCode);
+                res = new BikeManager().CancelReservation(idUser, idBike, reserveCode, comments);
                 ConexionProvider.GetInstance().CommitTran();
             }
             catch (Exception ex)

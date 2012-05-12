@@ -15,12 +15,16 @@ namespace com.mobilenik.socialbicing.logic
         {
             UserDao usrDao = new UserDao();
             BikeManager bikeMng = new BikeManager();
+            ReserveDao rDao = new ReserveDao();
 
             User usr = usrDao.getUser(idUser);
 
             UserStatus status = new UserStatus();
             status.idStatus = usr.idState;
             status.bikesAssigned = bikeMng.GetBikesByUser(idUser);
+            status.reserve = rDao.getReserveFromUser(idUser);
+            if (status.reserve != null)
+                status.reserve.Bike = bikeMng.GetBike(status.reserve.idBike);
 
             return status;
         }
@@ -85,6 +89,12 @@ namespace com.mobilenik.socialbicing.logic
         {
             UserDao dao = new UserDao();
             dao.UpdateStatus(idUser, Constants.STATE_USER_HAS_NO_BIKE);
+        }
+
+        internal void changeState(int idUser, int newState)
+        {
+            UserDao dao = new UserDao();
+            dao.UpdateStatus(idUser, newState);
         }
     }
 }
